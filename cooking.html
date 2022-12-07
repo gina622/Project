@@ -15,6 +15,8 @@
   </head>
   <body>
     <h1 class="recipe-title">Recipes</h1>
+    <div id="staydiv"><button id="stay">Instructions Only</button></div>
+
     <div class="flex-container">
       <div class="container">
         <div class="note">
@@ -637,6 +639,20 @@
       </div>
     </div>
 
+    <script>
+      function instructionStay() {
+        console.log("starting")
+        const overlayEls = document.querySelectorAll(".overlay")
+        for (const overlay of overlayEls) {
+          overlay.style.bottom = "0"
+          overlay.style.height = "100%"
+        }
+      }
+
+      document.getElementById("stay").addEventListener("click", function () {
+        instructionStay();
+      });
+    </script>
     <script src="js/navigation.js"></script>
   </body>
 </html>
